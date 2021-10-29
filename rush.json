@@ -391,6 +391,14 @@
     {
       "packageName": "app-3",
       "projectFolder": "apps/app-3"
+    },
+    {
+      "packageName": "heading",
+      "projectFolder": "components/heading"
+    },
+    {
+      "packageName": "button",
+      "projectFolder": "components/button"
     }
     // {
     //   /**
