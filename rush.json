@@ -389,6 +389,18 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    {
+      "packageName": "app-1",
+      "projectFolder": "apps/app-1"
+    },
+    {
+      "packageName": "app-2",
+      "projectFolder": "apps/app-2"
+    },
+    {
+      "packageName": "app-3",
+      "projectFolder": "apps/app-3"
+    },
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
