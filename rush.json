@@ -171,8 +171,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-  // "projectFolderMinDepth": 2,
-  // "projectFolderMaxDepth": 2,
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 3,
 
   /**
    * Today the npmjs.com registry enforces fairly strict naming rules for packages, but in the early
@@ -380,14 +380,14 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
-    {
-      "packageName": "app-1",
-      "projectFolder": "apps/app-1"
-    },
-    {
-      "packageName": "app-2",
-      "projectFolder": "apps/app-2"
-    },
+    // {
+    //   "packageName": "app-1",
+    //   "projectFolder": "apps/app-1"
+    // },
+    // {
+    //   "packageName": "app-2",
+    //   "projectFolder": "apps/app-2"
+    // },
     {
       "packageName": "app-3",
       "projectFolder": "apps/app-3"
@@ -395,11 +395,19 @@
     {
       "packageName": "heading",
       "projectFolder": "components/heading"
-    },
-    {
-      "packageName": "button",
-      "projectFolder": "components/button"
     }
+    // {
+    //   "packageName": "heading-example",
+    //   "projectFolder": "components/heading/example"
+    // },
+    // {
+    //   "packageName": "button",
+    //   "projectFolder": "components/button"
+    // },
+    // {
+    //   "packageName": "button-example",
+    //   "projectFolder": "components/button/example"
+    // }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
