@@ -1,10 +1,27 @@
-!(function (e, o) {
-  'object' == typeof exports && 'undefined' != typeof module
-    ? o(exports)
-    : 'function' == typeof define && define.amd
-    ? define(['exports'], o)
-    : o(((e || self).theme1 = {}));
-})(this, function (e) {
-  e.theme = { colors: { primary: 'green' } };
+(function (global, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['exports'], factory);
+  } else if (typeof exports !== 'undefined') {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {},
+    };
+    factory(mod.exports);
+    global.index = mod.exports;
+  }
+})(this, function (_exports) {
+  'use strict';
+  Object.defineProperty(_exports, '__esModule', {
+    value: true,
+  });
+  _exports.theme = void 0;
+  var theme = {
+    colors: {
+      primary: 'green',
+    },
+  };
+  _exports.theme = theme;
 });
+
 //# sourceMappingURL=index.umd.js.map

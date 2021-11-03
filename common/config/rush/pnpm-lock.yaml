@@ -1,37 +1,37 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/preset-react': ~7.16.0
-  '@emotion/babel-preset-css-prop': ~11.2.0
   '@rush-temp/app-3': file:./projects/app-3.tgz
   '@rush-temp/button': file:./projects/button.tgz
   '@rush-temp/heading': file:./projects/heading.tgz
   '@rush-temp/theme-1': file:./projects/theme-1.tgz
+  '@swc/cli': ~0.1.51
+  '@swc/core': ~1.2.106
   '@types/react': ^16.9.27
   '@types/react-dom': ^16.9.7
+  browserslist: ~4.17.6
   eslint-config-next: 12.0.1
   eslint-config-prettier: ^6.7.0
   eslint-plugin-prettier: ^3.1.1
   eslint-plugin-react: ^7.17.0
-  microbundle: ~0.14.1
   next: 12.0.1
   react-dom: 17.0.2
   typescript: ~4.4.4
 
 dependencies:
-  '@babel/preset-react': 7.16.0
-  '@emotion/babel-preset-css-prop': 11.2.0
   '@rush-temp/app-3': file:projects/app-3.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f
   '@rush-temp/button': file:projects/button.tgz
   '@rush-temp/heading': file:projects/heading.tgz
-  '@rush-temp/theme-1': file:projects/theme-1.tgz_@types+react@16.14.20
+  '@rush-temp/theme-1': file:projects/theme-1.tgz
+  '@swc/cli': 0.1.51_@swc+core@1.2.106
+  '@swc/core': 1.2.106
   '@types/react': 16.14.20
   '@types/react-dom': 16.9.14
+  browserslist: 4.17.6
   eslint-config-next: 12.0.1_next@12.0.1+typescript@4.4.4
   eslint-config-prettier: 6.15.0
   eslint-plugin-prettier: 3.4.1_eslint-config-prettier@6.15.0
   eslint-plugin-react: 7.26.1
-  microbundle: 0.14.1
   next: 12.0.1_react-dom@17.0.2
   react-dom: 17.0.2
   typescript: 4.4.4
@@ -2307,6 +2307,182 @@ packages:
       magic-string: 0.25.7
     dev: false
 
+  /@swc/cli/0.1.51_@swc+core@1.2.106:
+    resolution:
+      {
+        integrity: sha512-7eqZGpkI4QOYfF+9FV4xpT/V/LSRDs5OMJcm4Z46JnPMvv+sxumAFdCe1hHRzHgnzwis9OtjI8Tt3Srf9JudQw==,
+      }
+    engines: { node: '>= 12.13' }
+    hasBin: true
+    peerDependencies:
+      '@swc/core': ^1.2.66
+      chokidar: ^3.5.1
+    peerDependenciesMeta:
+      chokidar:
+        optional: true
+    dependencies:
+      '@swc/core': 1.2.106
+      commander: 7.2.0
+      fast-glob: 3.2.7
+      slash: 3.0.0
+      source-map: 0.7.3
+    dev: false
+
+  /@swc/core-android-arm64/1.2.106:
+    resolution:
+      {
+        integrity: sha512-F5T6kP3yV9S0/oXyco305QaAyE6rLNsNSdR0QI4CtACwKadiPwTOptwNIDCiTNLNgWlWLQmIRkPpxg+G4doT6Q==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm64]
+    os: [android]
+    dev: false
+    optional: true
+
+  /@swc/core-darwin-arm64/1.2.106:
+    resolution:
+      {
+        integrity: sha512-bgKzzYLFnc+mv2mDS/DLwzBvx5DCC9ZCKYY46b4dAnBfasr+SMHj+v/WI84HtilbjLBMUfYZ2hgYKls3CebIIQ==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm64]
+    os: [darwin]
+    dev: false
+    optional: true
+
+  /@swc/core-darwin-x64/1.2.106:
+    resolution:
+      {
+        integrity: sha512-I5Uhit5RqbXaMIV2+v9jL+MIQeR3lT1DqVwzxZs1bTARclAheFZQpTmg+h6QmichjCiUT74SXQb6Apc/vqYKog==,
+      }
+    engines: { node: '>=10' }
+    cpu: [x64]
+    os: [darwin]
+    dev: false
+    optional: true
+
+  /@swc/core-freebsd-x64/1.2.106:
+    resolution:
+      {
+        integrity: sha512-ZSK3vgzbA2Pkpw2LgHlAkUdx4okIpdXXTbLXuc5jkZMw1KhRWpeQaDlwbrN7XVynAYjkj2qgGQ7wv1tD43vQig==,
+      }
+    engines: { node: '>=10' }
+    cpu: [x64]
+    os: [freebsd]
+    dev: false
+    optional: true
+
+  /@swc/core-linux-arm-gnueabihf/1.2.106:
+    resolution:
+      {
+        integrity: sha512-WZh6XV8cQ9Fh3IQNX9z87Tv68+sLtfnT51ghMQxceRhfvc5gIaYW+PCppezDDdlPJnWXhybGWNPAl5SHppWb2g==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm]
+    os: [linux]
+    dev: false
+    optional: true
+
+  /@swc/core-linux-arm64-gnu/1.2.106:
+    resolution:
+      {
+        integrity: sha512-OSI9VUWPsRrCbUlRQ4KdYqdwV63VYBC5ahSNq+72DXhtRwVbLSFuF7MNsnXgUSMHidxbc0No3/bPPamshqHdsQ==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm64]
+    os: [linux]
+    dev: false
+    optional: true
+
+  /@swc/core-linux-arm64-musl/1.2.106:
+    resolution:
+      {
+        integrity: sha512-de8AAUOP8D2/tZIpQ399xw+pGGKlR1+l5Jmy4lW7ixarEI4xKkBSF4bS9eXtC1jckmenzrLPiK/5sSbQSf6BWQ==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm64]
+    os: [linux]
+    dev: false
+    optional: true
+
+  /@swc/core-linux-x64-gnu/1.2.106:
+    resolution:
+      {
+        integrity: sha512-QzFC7+lBSuVBmX5tS2pdM+74voiJcGgIMJ+x9pcjUu3GkDl3ow6WC6ta2WUzlgGopCGNp6IdZaFemKRzjLr3lw==,
+      }
+    engines: { node: '>=10' }
+    cpu: [x64]
+    os: [linux]
+    dev: false
+    optional: true
+
+  /@swc/core-linux-x64-musl/1.2.106:
+    resolution:
+      {
+        integrity: sha512-QZ1gFqNiCJefkNMihbmYc7nr5stERyjoQpWgAIN6dzrgMUzRHXHGDRl/p1qsXW2VKos+okSdLwPFEmRT94H+1A==,
+      }
+    engines: { node: '>=10' }
+    cpu: [x64]
+    os: [linux]
+    dev: false
+    optional: true
+
+  /@swc/core-win32-arm64-msvc/1.2.106:
+    resolution:
+      {
+        integrity: sha512-MbuQwk+s43bfBNnAZTKnoQlfo4UPSOsy6t9F15yU4P3rVUuFtcxdZg6CpDnUqNPbojILXujp8z4SSigRYh5cgg==,
+      }
+    engines: { node: '>=10' }
+    cpu: [arm64]
+    os: [win32]
+    dev: false
+    optional: true
+
+  /@swc/core-win32-ia32-msvc/1.2.106:
+    resolution:
+      {
+        integrity: sha512-BFxWpcPxsG2LLQZ+8K8ma45rbTckjpPbnvOOhybQ0hEhLgoVzMVPp3RIUGmC+RMZe6DkGSaEQf/Rjn2cbMdQhw==,
+      }
+    engines: { node: '>=10' }
+    cpu: [ia32]
+    os: [win32]
+    dev: false
+    optional: true
+
+  /@swc/core-win32-x64-msvc/1.2.106:
+    resolution:
+      {
+        integrity: sha512-Emn5akqApGXzPsA7ntSXEohL0AH0WjQMHy6mT3MS9Yil42yTJ96dJGf68ejKVptxwg7Iz798mT+J9r1JbAFBgg==,
+      }
+    engines: { node: '>=10' }
+    cpu: [x64]
+    os: [win32]
+    dev: false
+    optional: true
+
+  /@swc/core/1.2.106:
+    resolution:
+      {
+        integrity: sha512-9uw8gqU+lsk7KROAcSNhsrnBgNiC5H4MIaps5LlnnEevJmKu/o1ws22tXc2qjJg+F4/V1ynUbh8E0rYlmo1XGw==,
+      }
+    engines: { node: '>=10' }
+    dependencies:
+      '@node-rs/helper': 1.2.1
+    optionalDependencies:
+      '@swc/core-android-arm64': 1.2.106
+      '@swc/core-darwin-arm64': 1.2.106
+      '@swc/core-darwin-x64': 1.2.106
+      '@swc/core-freebsd-x64': 1.2.106
+      '@swc/core-linux-arm-gnueabihf': 1.2.106
+      '@swc/core-linux-arm64-gnu': 1.2.106
+      '@swc/core-linux-arm64-musl': 1.2.106
+      '@swc/core-linux-x64-gnu': 1.2.106
+      '@swc/core-linux-x64-musl': 1.2.106
+      '@swc/core-win32-arm64-msvc': 1.2.106
+      '@swc/core-win32-ia32-msvc': 1.2.106
+      '@swc/core-win32-x64-msvc': 1.2.106
+    dev: false
+
   /@trysound/sax/0.2.0:
     resolution:
       {
@@ -3080,6 +3256,21 @@ packages:
       picocolors: 1.0.0
     dev: false
 
+  /browserslist/4.17.6:
+    resolution:
+      {
+        integrity: sha512-uPgz3vyRTlEiCv4ee9KlsKgo2V6qPk7Jsn0KAn2OBqbqKo3iNcPEC1Ti6J4dwnz+aIRfEEEuOzC9IBk8tXUomw==,
+      }
+    engines: { node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7 }
+    hasBin: true
+    dependencies:
+      caniuse-lite: 1.0.30001275
+      electron-to-chromium: 1.3.887
+      escalade: 3.1.1
+      node-releases: 2.0.1
+      picocolors: 1.0.0
+    dev: false
+
   /buffer-from/1.1.2:
     resolution:
       {
@@ -3163,6 +3354,13 @@ packages:
     resolution:
       {
         integrity: sha512-DV1j9Oot5dydyH1v28g25KoVm7l8MTxazwuiH3utWiAS6iL/9Nh//TGwqFEeqqN8nnWYQ8HHhUq+o4QPt9kvYw==,
+      }
+    dev: false
+
+  /caniuse-lite/1.0.30001275:
+    resolution:
+      {
+        integrity: sha512-ihJVvj8RX0kn9GgP43HKhb5q9s2XQn4nEQhdldEJvZhCsuiB2XOq6fAMYQZaN6FPWfsr2qU0cdL0CSbETwbJAg==,
       }
     dev: false
 
@@ -3877,6 +4075,13 @@ packages:
     resolution:
       {
         integrity: sha512-kOaCAa+biA98PwH5BpCkeUeTL6mCeg8p3Q3OhqzPyqhu/5QUnWAN2wr/3IK8xMQxIV76kfoQpP+Bn/wij/jXrg==,
+      }
+    dev: false
+
+  /electron-to-chromium/1.3.887:
+    resolution:
+      {
+        integrity: sha512-QQUumrEjFDKSVYVdaeBmFdyQGoaV+fCSMyWHvfx/u22bRHSTeBQYt6P4jMY+gFd4kgKB9nqk7RMtWkDB49OYPA==,
       }
     dev: false
 
@@ -8989,7 +9194,7 @@ packages:
   file:projects/button.tgz:
     resolution:
       {
-        integrity: sha512-/QoHpyUybG6H3iHSKl5fm76wapVA9M1VhIDWT8ymq+DmIJqv6BXGB+EOTkE16Ninf8X+mT6kSRil3LOxoQx/qw==,
+        integrity: sha512-VFAyBJt4ExATNksC0N1FOvld6K4oDsbWs3zCIC7s3YovKXaz4Xnmz0hvb2pMvk6Ui4CYgA63fTfhj1Sbs0ldGg==,
         tarball: file:projects/button.tgz,
       }
     name: '@rush-temp/button'
@@ -8998,8 +9203,11 @@ packages:
       '@babel/preset-react': 7.16.0
       '@emotion/babel-preset-css-prop': 11.2.0
       '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      '@swc/cli': 0.1.51_@swc+core@1.2.106
+      '@swc/core': 1.2.106
       '@types/react': 16.14.20
       '@types/react-dom': 16.9.14
+      browserslist: 4.17.6
       eslint: 6.8.0
       eslint-config-prettier: 6.15.0_eslint@6.8.0
       eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
@@ -9010,16 +9218,15 @@ packages:
       typescript: 4.4.4
     transitivePeerDependencies:
       - '@babel/core'
-      - '@types/babel__core'
+      - chokidar
       - prettier
       - supports-color
-      - ts-node
     dev: false
 
   file:projects/heading.tgz:
     resolution:
       {
-        integrity: sha512-x2sbvCV2Ag8CmiIxiB26hiDK7aOkdSIIhHqLtRbLQpenoIYfhGU3t/RnOV4b7sRLrM0owZc1wk0nursChu51tg==,
+        integrity: sha512-kIFiIaU2jXLcaY9BXNqY5GikTqVDWk6t0ul9R5Jzx8dGmQTqHm+JiZyWWp70aorJq99r19kFB3jD7ZimseOvaw==,
         tarball: file:projects/heading.tgz,
       }
     name: '@rush-temp/heading'
@@ -9029,8 +9236,11 @@ packages:
       '@emotion/babel-plugin': 11.3.0
       '@emotion/babel-preset-css-prop': 11.2.0
       '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      '@swc/cli': 0.1.51_@swc+core@1.2.106
+      '@swc/core': 1.2.106
       '@types/react': 16.14.20
       '@types/react-dom': 16.9.14
+      browserslist: 4.17.6
       eslint: 6.8.0
       eslint-config-prettier: 6.15.0_eslint@6.8.0
       eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
@@ -9041,34 +9251,30 @@ packages:
       typescript: 4.4.4
     transitivePeerDependencies:
       - '@babel/core'
-      - '@types/babel__core'
+      - chokidar
       - prettier
       - supports-color
-      - ts-node
     dev: false
 
-  file:projects/theme-1.tgz_@types+react@16.14.20:
+  file:projects/theme-1.tgz:
     resolution:
       {
-        integrity: sha512-qnEtB3L4ZD77sHIQhYwdozxpyM/ZkNIN2VxNqVX078VNirJAN4G7HyknNjgAOPpx6/vir0jjxPZrShzE1u3taw==,
+        integrity: sha512-QxoOvYpwsiZxr98JI6auAta2WFR5WFf1BNL2hDeeoFPF816PBukkxl+jlLliHekfn7Sujnl1EUNStqvyxbFevA==,
         tarball: file:projects/theme-1.tgz,
       }
-    id: file:projects/theme-1.tgz
     name: '@rush-temp/theme-1'
     version: 0.0.0
     dependencies:
-      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      '@swc/cli': 0.1.51_@swc+core@1.2.106
+      '@swc/core': 1.2.106
+      browserslist: 4.17.6
       eslint: 6.8.0
       eslint-config-prettier: 6.15.0_eslint@6.8.0
       eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
       microbundle: 0.14.1
-      react: 17.0.2
       typescript: 4.4.4
     transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/babel__core'
-      - '@types/react'
+      - chokidar
       - prettier
       - supports-color
-      - ts-node
     dev: false

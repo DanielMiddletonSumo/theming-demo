@@ -1,1 +1,1 @@
-{"version":3,"file":"index.umd.js","sources":["../src/index.ts"],"sourcesContent":["export const theme = {\n  colors: {\n    primary: 'green',\n  },\n};\n\nexport type Theme = typeof theme;\n"],"names":["colors","primary"],"mappings":"wOAAqB,CACnBA,OAAQ,CACNC,QAAS"}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"index.umd.js"}

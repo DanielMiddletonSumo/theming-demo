@@ -1,28 +1,41 @@
-import { ThemeProvider as r, css as o } from '@emotion/react';
-import { theme as t } from 'theme-1';
-import { jsx as e } from '@emotion/react/jsx-runtime';
-var n,
-  i = function (i) {
-    var c = i.type;
-    return e(r, {
-      theme: t,
-      children: e('button', {
-        css: function (r) {
-          return o(
-            n ||
-              ((t = ['\n          color: ', ';\n        ']),
-              e || (e = t.slice(0)),
-              (t.raw = e),
-              (n = t)),
-            r.colors.primary
-          );
-          var t, e;
-        },
-        type: void 0 === c ? 'button' : c,
-        onClick: i.onClick,
-        children: i.children,
-      }),
-    });
+import { jsx as _jsx } from '@emotion/react/jsx-runtime';
+import { css, ThemeProvider } from '@emotion/react';
+import { theme as theme1 } from 'theme-1';
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+  return Object.freeze(
+    Object.defineProperties(strings, {
+      raw: {
+        value: Object.freeze(raw),
+      },
+    })
+  );
+}
+function _templateObject() {
+  var data = _taggedTemplateLiteral(['\n          color: ', ';\n        ']);
+  _templateObject = function _templateObject() {
+    return data;
   };
-export { i as Button };
+  return data;
+}
+export var Button = function (param) {
+  var children = param.children,
+    _type = param.type,
+    type = _type === void 0 ? 'button' : _type,
+    onClick = param.onClick;
+  return /*#__PURE__*/ _jsx(ThemeProvider, {
+    theme: theme1,
+    children: /*#__PURE__*/ _jsx('button', {
+      css: function (theme) {
+        return css(_templateObject(), theme.colors.primary);
+      },
+      type: type,
+      onClick: onClick,
+      children: children,
+    }),
+  });
+};
+
 //# sourceMappingURL=index.modern.js.map

@@ -1,3 +1,7 @@
-var r = { colors: { primary: 'green' } };
-export { r as theme };
+export var theme = {
+  colors: {
+    primary: 'green',
+  },
+};
+
 //# sourceMappingURL=index.modern.js.map

@@ -8,5 +8,5 @@ export declare const Button: ({
   children,
   type,
   onClick,
-}: ButtonProps) => import('@emotion/react/jsx-runtime').JSX.Element;
+}: ButtonProps) => import('@emotion/react/types/jsx-namespace').EmotionJSX.Element;
 export {};
