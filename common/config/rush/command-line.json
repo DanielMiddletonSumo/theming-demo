@@ -34,6 +34,7 @@
       // Enable "watch mode"
       "watchForChanges": true
     }
+
     // {
     //   /**
     //    * (Required) Determines the type of custom command.

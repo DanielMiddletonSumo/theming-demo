@@ -4,7 +4,9 @@ specifiers:
   '@babel/preset-react': ~7.16.0
   '@emotion/babel-preset-css-prop': ~11.2.0
   '@rush-temp/app-3': file:./projects/app-3.tgz
+  '@rush-temp/button': file:./projects/button.tgz
   '@rush-temp/heading': file:./projects/heading.tgz
+  '@rush-temp/theme-1': file:./projects/theme-1.tgz
   '@types/react': ^16.9.27
   '@types/react-dom': ^16.9.7
   eslint-config-next: 12.0.1
@@ -13,13 +15,16 @@ specifiers:
   eslint-plugin-react: ^7.17.0
   microbundle: ~0.14.1
   next: 12.0.1
+  react-dom: 17.0.2
   typescript: ~4.4.4
 
 dependencies:
   '@babel/preset-react': 7.16.0
   '@emotion/babel-preset-css-prop': 11.2.0
   '@rush-temp/app-3': file:projects/app-3.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f
+  '@rush-temp/button': file:projects/button.tgz
   '@rush-temp/heading': file:projects/heading.tgz
+  '@rush-temp/theme-1': file:projects/theme-1.tgz_@types+react@16.14.20
   '@types/react': 16.14.20
   '@types/react-dom': 16.9.14
   eslint-config-next: 12.0.1_next@12.0.1+typescript@4.4.4
@@ -27,7 +32,8 @@ dependencies:
   eslint-plugin-prettier: 3.4.1_eslint-config-prettier@6.15.0
   eslint-plugin-react: 7.26.1
   microbundle: 0.14.1
-  next: 12.0.1
+  next: 12.0.1_react-dom@17.0.2
+  react-dom: 17.0.2
   typescript: 4.4.4
 
 packages:
@@ -1792,32 +1798,6 @@ packages:
       }
     dev: false
 
-  /@emotion/react/11.5.0_12390b0a6900096c3be93fba6e1b742f:
-    resolution:
-      {
-        integrity: sha512-MYq/bzp3rYbee4EMBORCn4duPQfgpiEB5XzrZEBnUZAL80Qdfr7CEv/T80jwaTl/dnZmt9SnTa8NkTrwFNpLlw==,
-      }
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      '@types/react': '*'
-      react: '>=16.8.0'
-    peerDependenciesMeta:
-      '@babel/core':
-        optional: true
-      '@types/react':
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.15.4
-      '@emotion/cache': 11.5.0
-      '@emotion/serialize': 1.0.2
-      '@emotion/sheet': 1.0.3
-      '@emotion/utils': 1.0.0
-      '@emotion/weak-memoize': 0.2.5
-      '@types/react': 16.14.20
-      hoist-non-react-statics: 3.3.2
-      react: 16.14.0
-    dev: false
-
   /@emotion/react/11.5.0_8f2a70223edc24c84ceb1eb31a596bed:
     resolution:
       {
@@ -1982,7 +1962,7 @@ packages:
       }
     dev: false
 
-  /@next/react-dev-overlay/12.0.1:
+  /@next/react-dev-overlay/12.0.1_react-dom@17.0.2:
     resolution:
       {
         integrity: sha512-dLv1to40bvadbr0VO8pBsbr9ddgktCLilfejOpEFQkOOrdQBUuIfegqqEDiCL9THkAO3QGYY4t/ZPfv9wrxLZQ==,
@@ -2002,6 +1982,7 @@ packages:
       css.escape: 1.5.1
       data-uri-to-buffer: 3.0.1
       platform: 1.3.6
+      react-dom: 17.0.2
       shell-quote: 1.7.2
       source-map: 0.8.0-beta.0
       stacktrace-parser: 0.1.10
@@ -4100,7 +4081,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.4.1
       eslint-plugin-react: 7.26.1
       eslint-plugin-react-hooks: 4.2.0
-      next: 12.0.1
+      next: 12.0.1_react-dom@17.0.2
       typescript: 4.4.4
     transitivePeerDependencies:
       - supports-color
@@ -6186,7 +6167,7 @@ packages:
       }
     dev: false
 
-  /next/12.0.1:
+  /next/12.0.1_react-dom@17.0.2:
     resolution:
       {
         integrity: sha512-4MNXAbD9+Tmtejg0TOKbaP52Cgu4mIn2ejKMLHWV0acxWGkkcE7QvdZwvg5pkg3fQBMrgucOxxtmw4D7yWaZvg==,
@@ -6211,7 +6192,7 @@ packages:
       '@hapi/accept': 5.0.2
       '@next/env': 12.0.1
       '@next/polyfill-module': 12.0.1
-      '@next/react-dev-overlay': 12.0.1
+      '@next/react-dev-overlay': 12.0.1_react-dom@17.0.2
       '@next/react-refresh-utils': 12.0.1_react-refresh@0.8.3
       '@node-rs/helper': 1.2.1
       acorn: 8.5.0
@@ -6243,9 +6224,10 @@ packages:
       process: 0.11.10
       querystring-es3: 0.2.1
       raw-body: 2.4.1
+      react-dom: 17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
-      react-server-dom-webpack: 0.0.0-experimental-3c4c1c470-20211021
+      react-server-dom-webpack: 0.0.0-experimental-3c4c1c470-20211021_react-dom@17.0.2
       regenerator-runtime: 0.13.4
       stream-browserify: 3.0.0
       stream-http: 3.1.1
@@ -7474,19 +7456,17 @@ packages:
       unpipe: 1.0.0
     dev: false
 
-  /react-dom/16.14.0_react@16.14.0:
+  /react-dom/17.0.2:
     resolution:
       {
-        integrity: sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==,
+        integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==,
       }
     peerDependencies:
-      react: ^16.14.0
+      react: 17.0.2
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 16.14.0
-      scheduler: 0.19.1
+      scheduler: 0.20.2
     dev: false
 
   /react-dom/17.0.2_react@17.0.2:
@@ -7525,7 +7505,7 @@ packages:
     engines: { node: '>=0.10.0' }
     dev: false
 
-  /react-server-dom-webpack/0.0.0-experimental-3c4c1c470-20211021:
+  /react-server-dom-webpack/0.0.0-experimental-3c4c1c470-20211021_react-dom@17.0.2:
     resolution:
       {
         integrity: sha512-YyRlED5kR0C2aQ3IJ/8BR2TELt51RcDZhnUDKz+m/HU+Gb/qak0CZkG0A8Zxffom9VI6HFkUj1dRFZqm0Lh9Pg==,
@@ -7540,6 +7520,7 @@ packages:
       loose-envify: 1.4.0
       neo-async: 2.6.2
       object-assign: 4.1.1
+      react-dom: 17.0.2
     dev: false
 
   /react-server-dom-webpack/0.0.0-experimental-3c4c1c470-20211021_react-dom@17.0.2+react@17.0.2:
@@ -7559,18 +7540,6 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-    dev: false
-
-  /react/16.14.0:
-    resolution:
-      {
-        integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==,
-      }
-    engines: { node: '>=0.10.0' }
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.7.2
     dev: false
 
   /react/17.0.2:
@@ -7960,16 +7929,6 @@ packages:
       {
         integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==,
       }
-    dev: false
-
-  /scheduler/0.19.1:
-    resolution:
-      {
-        integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==,
-      }
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /scheduler/0.20.2:
@@ -9003,7 +8962,7 @@ packages:
   file:projects/app-3.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f:
     resolution:
       {
-        integrity: sha512-tXGbVcZhBoUBW6hsDD8OWvz39v4br5lhOVCZZCZF5CxgAeRqW/K46iiUnhkUunYzPbRr/WiAXQRK4esh/abSGA==,
+        integrity: sha512-LAvae+nZzxV6Cpt0fhpNyzZ/sghagk7Hr+knBvVXzBjT8qOlmeftWqnMZbeY4KhamXEutAdcJ/hUvm9Xj1xUOA==,
         tarball: file:projects/app-3.tgz,
       }
     id: file:projects/app-3.tgz
@@ -9027,10 +8986,40 @@ packages:
       - webpack
     dev: false
 
+  file:projects/button.tgz:
+    resolution:
+      {
+        integrity: sha512-/QoHpyUybG6H3iHSKl5fm76wapVA9M1VhIDWT8ymq+DmIJqv6BXGB+EOTkE16Ninf8X+mT6kSRil3LOxoQx/qw==,
+        tarball: file:projects/button.tgz,
+      }
+    name: '@rush-temp/button'
+    version: 0.0.0
+    dependencies:
+      '@babel/preset-react': 7.16.0
+      '@emotion/babel-preset-css-prop': 11.2.0
+      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      '@types/react': 16.14.20
+      '@types/react-dom': 16.9.14
+      eslint: 6.8.0
+      eslint-config-prettier: 6.15.0_eslint@6.8.0
+      eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
+      eslint-plugin-react: 7.26.1_eslint@6.8.0
+      microbundle: 0.14.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      typescript: 4.4.4
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/babel__core'
+      - prettier
+      - supports-color
+      - ts-node
+    dev: false
+
   file:projects/heading.tgz:
     resolution:
       {
-        integrity: sha512-PoOgNClue6OqBa7x4fp8/EAHjrLvtvUnjgeTWrO5nx5F6yj1NnAyqJicJFk/Hek+ScYhhU5nslfS/3DbNXZJVA==,
+        integrity: sha512-x2sbvCV2Ag8CmiIxiB26hiDK7aOkdSIIhHqLtRbLQpenoIYfhGU3t/RnOV4b7sRLrM0owZc1wk0nursChu51tg==,
         tarball: file:projects/heading.tgz,
       }
     name: '@rush-temp/heading'
@@ -9039,7 +9028,7 @@ packages:
       '@babel/preset-react': 7.16.0
       '@emotion/babel-plugin': 11.3.0
       '@emotion/babel-preset-css-prop': 11.2.0
-      '@emotion/react': 11.5.0_12390b0a6900096c3be93fba6e1b742f
+      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
       '@types/react': 16.14.20
       '@types/react-dom': 16.9.14
       eslint: 6.8.0
@@ -9047,12 +9036,38 @@ packages:
       eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
       eslint-plugin-react: 7.26.1_eslint@6.8.0
       microbundle: 0.14.1
-      react: 16.14.0
-      react-dom: 16.14.0_react@16.14.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       typescript: 4.4.4
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/babel__core'
+      - prettier
+      - supports-color
+      - ts-node
+    dev: false
+
+  file:projects/theme-1.tgz_@types+react@16.14.20:
+    resolution:
+      {
+        integrity: sha512-qnEtB3L4ZD77sHIQhYwdozxpyM/ZkNIN2VxNqVX078VNirJAN4G7HyknNjgAOPpx6/vir0jjxPZrShzE1u3taw==,
+        tarball: file:projects/theme-1.tgz,
+      }
+    id: file:projects/theme-1.tgz
+    name: '@rush-temp/theme-1'
+    version: 0.0.0
+    dependencies:
+      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      eslint: 6.8.0
+      eslint-config-prettier: 6.15.0_eslint@6.8.0
+      eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
+      microbundle: 0.14.1
+      react: 17.0.2
+      typescript: 4.4.4
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/babel__core'
+      - '@types/react'
       - prettier
       - supports-color
       - ts-node

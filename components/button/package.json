@@ -1,0 +1,44 @@
+{
+  "name": "button",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "none",
+  "repository": "/button",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle --jsxImportSource=@emotion/react",
+    "dev": "microbundle watch --no-compress --jsxImportSource=@emotion/react",
+    "build:watch": "microbundle --no-compress --jsxImportSource=@emotion/react"
+  },
+  "peerDependencies": {
+    "react": ">=16.14.0",
+    "@emotion/react": ">=11.0.0 <12.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.27",
+    "@types/react-dom": "^16.9.7",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "@emotion/react": "~11.5.0",
+    "@babel/preset-react": "~7.16.0",
+    "microbundle": "~0.14.1",
+    "typescript": "~4.4.4",
+    "@emotion/babel-preset-css-prop": "~11.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "theme-1": "~1.0.0"
+  }
+}

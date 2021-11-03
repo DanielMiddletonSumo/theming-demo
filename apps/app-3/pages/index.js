@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Heading } from 'heading';
+import { Button } from 'button';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -15,13 +16,13 @@ export default function Home() {
         <Heading className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </Heading>
-        <button
+        <Button
           onClick={() => {
             console.log('clicked button');
           }}
         >
           Click Me
-        </button>
+        </Button>
       </main>
     </div>
   );

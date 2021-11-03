@@ -395,19 +395,15 @@
     {
       "packageName": "heading",
       "projectFolder": "components/heading"
+    },
+    {
+      "packageName": "button",
+      "projectFolder": "components/button"
+    },
+    {
+      "packageName": "theme-1",
+      "projectFolder": "themes/theme-1"
     }
-    // {
-    //   "packageName": "heading-example",
-    //   "projectFolder": "components/heading/example"
-    // },
-    // {
-    //   "packageName": "button",
-    //   "projectFolder": "components/button"
-    // },
-    // {
-    //   "packageName": "button-example",
-    //   "projectFolder": "components/button/example"
-    // }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
