@@ -13,6 +13,7 @@ const options = {
   sourcemap: 'external',
   target: 'es2015',
   mainFields: ['module', 'main'],
+  external: ['@emotion/react'],
 };
 
 async function main() {
