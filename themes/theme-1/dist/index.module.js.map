@@ -2,6 +2,6 @@
   "version": 3,
   "sources": ["../src/index.ts"],
   "sourcesContent": ["export const theme = {\n  colors: {\n    primary: '#0aa',\n    secondary: '#fb7',\n    danger: 'red',\n    caution: 'orange',\n  },\n} as const;\n\nexport type Theme = typeof theme;\n"],
-  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA;AAAO,IAAM,QAAQ;AAAA,EACnB,QAAQ;AAAA,IACN,SAAS;AAAA,IACT,WAAW;AAAA,IACX,QAAQ;AAAA,IACR,SAAS;AAAA;AAAA;",
+  "mappings": ";AAAO,IAAM,QAAQ;AAAA,EACnB,QAAQ;AAAA,IACN,SAAS;AAAA,IACT,WAAW;AAAA,IACX,QAAQ;AAAA,IACR,SAAS;AAAA;AAAA;",
   "names": []
 }

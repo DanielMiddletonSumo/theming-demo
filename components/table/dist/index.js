@@ -4733,28 +4733,83 @@ var require_dist = __commonJS({
 
 // src/index.tsx
 __export(exports, {
-  Button: () => Button,
+  Table: () => Table,
 });
 init_react_shim();
 init_emotion_react_browser_esm();
 var import_theme_1 = __toModule(require_dist());
-var Button = ({ children, type = 'button', onClick }) => {
+
+// src/TableHeader.tsx
+init_react_shim();
+init_emotion_react_browser_esm();
+var TableHeader = ({ children }) => {
+  return /* @__PURE__ */ jsx(
+    'th',
+    {
+      css: theme2 => css`
+        color: ${theme2.colors.secondary};
+      `,
+    },
+    children
+  );
+};
+
+// src/TableRow.tsx
+init_react_shim();
+var TableRow = ({ row }) => {
+  return /* @__PURE__ */ jsx(
+    'tr',
+    null,
+    row.map(field =>
+      /* @__PURE__ */ jsx(
+        'td',
+        {
+          key: field,
+        },
+        field
+      )
+    )
+  );
+};
+
+// src/index.tsx
+var Table = ({ data: { headers, rows } }) => {
   return /* @__PURE__ */ jsx(
     ThemeProvider,
     {
       theme: import_theme_1.theme,
     },
     /* @__PURE__ */ jsx(
-      'button',
-      {
-        css: theme2 => css`
-          color: ${theme2.colors.primary};
-          border-color: ${theme2.colors.secondary};
-        `,
-        type,
-        onClick,
-      },
-      children
+      'table',
+      null,
+      !!(headers == null ? void 0 : headers.length) &&
+        /* @__PURE__ */ jsx(
+          'thead',
+          null,
+          /* @__PURE__ */ jsx(
+            'tr',
+            null,
+            headers.map(header =>
+              /* @__PURE__ */ jsx(
+                TableHeader,
+                {
+                  key: header,
+                },
+                header
+              )
+            )
+          )
+        ),
+      /* @__PURE__ */ jsx(
+        'tbody',
+        null,
+        rows.map(row =>
+          /* @__PURE__ */ jsx(TableRow, {
+            key: row.join(''),
+            row,
+          })
+        )
+      )
     )
   );
 };

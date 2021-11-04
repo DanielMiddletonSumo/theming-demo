@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Heading } from 'heading';
 import { Button } from 'button';
+import { Table } from 'table';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -23,6 +24,15 @@ export default function Home() {
         >
           Click Me
         </Button>
+        <Table
+          data={{
+            headers: ['column 1', 'column 2'],
+            rows: [
+              ['foo', 'bar'],
+              ['foo2', 'bar2'],
+            ],
+          }}
+        />
       </main>
     </div>
   );

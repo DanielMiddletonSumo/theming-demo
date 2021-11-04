@@ -1,13 +1,20 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+var __defProp = Object.defineProperty;
+var __markAsModule = target => __defProp(target, '__esModule', { value: true });
+var __export = (target, all) => {
+  __markAsModule(target);
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+
+// src/index.ts
+__export(exports, {
+  theme: () => theme,
 });
-exports.theme = void 0;
 var theme = {
   colors: {
-    primary: 'green',
+    primary: '#0aa',
+    secondary: '#fb7',
+    danger: 'red',
+    caution: 'orange',
   },
 };
-exports.theme = theme;
-
-//# sourceMappingURL=index.js.map

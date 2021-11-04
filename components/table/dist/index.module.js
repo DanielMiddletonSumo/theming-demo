@@ -16,38 +16,30 @@ var __commonJS = (cb, mod) =>
       mod.exports
     );
   };
-var __export = (target, all) => {
-  __markAsModule(target);
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __reExport = (target, module2, desc) => {
-  if (
-    (module2 && typeof module2 === 'object') ||
-    typeof module2 === 'function'
-  ) {
-    for (let key of __getOwnPropNames(module2))
+var __reExport = (target, module, desc) => {
+  if ((module && typeof module === 'object') || typeof module === 'function') {
+    for (let key of __getOwnPropNames(module))
       if (!__hasOwnProp.call(target, key) && key !== 'default')
         __defProp(target, key, {
-          get: () => module2[key],
+          get: () => module[key],
           enumerable:
-            !(desc = __getOwnPropDesc(module2, key)) || desc.enumerable,
+            !(desc = __getOwnPropDesc(module, key)) || desc.enumerable,
         });
   }
   return target;
 };
-var __toModule = module2 => {
+var __toModule = module => {
   return __reExport(
     __markAsModule(
       __defProp(
-        module2 != null ? __create(__getProtoOf(module2)) : {},
+        module != null ? __create(__getProtoOf(module)) : {},
         'default',
-        module2 && module2.__esModule && 'default' in module2
-          ? { get: () => module2.default, enumerable: true }
-          : { value: module2, enumerable: true }
+        module && module.__esModule && 'default' in module
+          ? { get: () => module.default, enumerable: true }
+          : { value: module, enumerable: true }
       )
     ),
-    module2
+    module
   );
 };
 
@@ -55,7 +47,7 @@ var __toModule = module2 => {
 var require_object_assign = __commonJS({
   '../../common/temp/node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js'(
     exports,
-    module2
+    module
   ) {
     init_react_shim();
     ('use strict');
@@ -105,7 +97,7 @@ var require_object_assign = __commonJS({
         return false;
       }
     }
-    module2.exports = shouldUseNative()
+    module.exports = shouldUseNative()
       ? Object.assign
       : function (target, source) {
           var from2;
@@ -2060,14 +2052,14 @@ var require_react_development = __commonJS({
 var require_react = __commonJS({
   '../../common/temp/node_modules/.pnpm/react@17.0.2/node_modules/react/index.js'(
     exports,
-    module2
+    module
   ) {
     init_react_shim();
     ('use strict');
     if (false) {
-      module2.exports = null;
+      module.exports = null;
     } else {
-      module2.exports = require_react_development();
+      module.exports = require_react_development();
     }
   },
 });
@@ -3609,14 +3601,14 @@ var require_react_is_development = __commonJS({
 var require_react_is = __commonJS({
   '../../common/temp/node_modules/.pnpm/react-is@16.13.1/node_modules/react-is/index.js'(
     exports,
-    module2
+    module
   ) {
     init_react_shim();
     ('use strict');
     if (false) {
-      module2.exports = null;
+      module.exports = null;
     } else {
-      module2.exports = require_react_is_development();
+      module.exports = require_react_is_development();
     }
   },
 });
@@ -3625,7 +3617,7 @@ var require_react_is = __commonJS({
 var require_hoist_non_react_statics_cjs = __commonJS({
   '../../common/temp/node_modules/.pnpm/hoist-non-react-statics@3.3.2/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js'(
     exports,
-    module2
+    module
   ) {
     init_react_shim();
     ('use strict');
@@ -3717,7 +3709,7 @@ var require_hoist_non_react_statics_cjs = __commonJS({
       }
       return targetComponent;
     }
-    module2.exports = hoistNonReactStatics;
+    module.exports = hoistNonReactStatics;
   },
 });
 
@@ -4712,12 +4704,12 @@ var require_dist = __commonJS({
     var __defProp2 = Object.defineProperty;
     var __markAsModule2 = target =>
       __defProp2(target, '__esModule', { value: true });
-    var __export2 = (target, all) => {
+    var __export = (target, all) => {
       __markAsModule2(target);
       for (var name in all)
         __defProp2(target, name, { get: all[name], enumerable: true });
     };
-    __export2(exports, {
+    __export(exports, {
       theme: () => theme2,
     });
     var theme2 = {
@@ -4732,32 +4724,85 @@ var require_dist = __commonJS({
 });
 
 // src/index.tsx
-__export(exports, {
-  Button: () => Button,
-});
 init_react_shim();
 init_emotion_react_browser_esm();
 var import_theme_1 = __toModule(require_dist());
-var Button = ({ children, type = 'button', onClick }) => {
+
+// src/TableHeader.tsx
+init_react_shim();
+init_emotion_react_browser_esm();
+var TableHeader = ({ children }) => {
+  return /* @__PURE__ */ jsx(
+    'th',
+    {
+      css: theme2 => css`
+        color: ${theme2.colors.secondary};
+      `,
+    },
+    children
+  );
+};
+
+// src/TableRow.tsx
+init_react_shim();
+var TableRow = ({ row }) => {
+  return /* @__PURE__ */ jsx(
+    'tr',
+    null,
+    row.map(field =>
+      /* @__PURE__ */ jsx(
+        'td',
+        {
+          key: field,
+        },
+        field
+      )
+    )
+  );
+};
+
+// src/index.tsx
+var Table = ({ data: { headers, rows } }) => {
   return /* @__PURE__ */ jsx(
     ThemeProvider,
     {
       theme: import_theme_1.theme,
     },
     /* @__PURE__ */ jsx(
-      'button',
-      {
-        css: theme2 => css`
-          color: ${theme2.colors.primary};
-          border-color: ${theme2.colors.secondary};
-        `,
-        type,
-        onClick,
-      },
-      children
+      'table',
+      null,
+      !!(headers == null ? void 0 : headers.length) &&
+        /* @__PURE__ */ jsx(
+          'thead',
+          null,
+          /* @__PURE__ */ jsx(
+            'tr',
+            null,
+            headers.map(header =>
+              /* @__PURE__ */ jsx(
+                TableHeader,
+                {
+                  key: header,
+                },
+                header
+              )
+            )
+          )
+        ),
+      /* @__PURE__ */ jsx(
+        'tbody',
+        null,
+        rows.map(row =>
+          /* @__PURE__ */ jsx(TableRow, {
+            key: row.join(''),
+            row,
+          })
+        )
+      )
     )
   );
 };
+export { Table };
 /*
 object-assign
 (c) Sindre Sorhus

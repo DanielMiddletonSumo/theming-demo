@@ -401,6 +401,10 @@
       "projectFolder": "components/button"
     },
     {
+      "packageName": "table",
+      "projectFolder": "components/table"
+    },
+    {
       "packageName": "theme-1",
       "projectFolder": "themes/theme-1"
     }

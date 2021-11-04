@@ -13,6 +13,7 @@ export const Button = ({ children, type = 'button', onClick }: ButtonProps) => {
       <button
         css={(theme: Theme) => css`
           color: ${theme.colors.primary};
+          border-color: ${theme.colors.secondary};
         `}
         type={type}
         onClick={onClick}
