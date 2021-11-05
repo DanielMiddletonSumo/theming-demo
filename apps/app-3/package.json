@@ -15,7 +15,9 @@
     "heading": "~1.0.0",
     "@emotion/react": "~11.5.0",
     "button": "~1.0.0",
-    "table": "~1.0.0"
+    "table": "~1.0.0",
+    "theme-2": "~1.0.0",
+    "theme-template": "~1.0.0"
   },
   "devDependencies": {
     "eslint": "7",

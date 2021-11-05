@@ -2,7 +2,7 @@ import { Theme } from 'theme-template';
 
 export const theme: Theme = {
   colors: {
-    primary: '#555753',
+    primary: 'blue',
     secondary: '#7D775C',
     accent: '#B7A5DF',
     danger: 'red',

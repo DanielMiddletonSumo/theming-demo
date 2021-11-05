@@ -10,6 +10,7 @@ const options = {
   sourcemap: 'external',
   target: 'es2015',
   mainFields: ['module', 'main'],
+  watch: argv.watch,
 };
 
 async function main() {

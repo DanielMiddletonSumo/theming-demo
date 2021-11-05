@@ -1,7 +1,7 @@
 // src/index.ts
 var theme = {
   colors: {
-    primary: '#555753',
+    primary: 'blue',
     secondary: '#7D775C',
     accent: '#B7A5DF',
     danger: 'red',
