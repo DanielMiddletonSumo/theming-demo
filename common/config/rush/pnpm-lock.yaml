@@ -6,6 +6,9 @@ specifiers:
   '@rush-temp/heading': file:./projects/heading.tgz
   '@rush-temp/table': file:./projects/table.tgz
   '@rush-temp/theme-1': file:./projects/theme-1.tgz
+  '@rush-temp/theme-2': file:./projects/theme-2.tgz
+  '@rush-temp/theme-3': file:./projects/theme-3.tgz
+  '@rush-temp/theme-template': file:./projects/theme-template.tgz
   '@types/react': ^16.9.27
   '@types/react-dom': ^16.9.7
   esbuild: ~0.13.12
@@ -24,6 +27,9 @@ dependencies:
   '@rush-temp/heading': file:projects/heading.tgz
   '@rush-temp/table': file:projects/table.tgz
   '@rush-temp/theme-1': file:projects/theme-1.tgz
+  '@rush-temp/theme-2': file:projects/theme-2.tgz
+  '@rush-temp/theme-3': file:projects/theme-3.tgz
+  '@rush-temp/theme-template': file:projects/theme-template.tgz
   '@types/react': 16.14.20
   '@types/react-dom': 16.9.14
   esbuild: 0.13.12
@@ -9488,7 +9494,7 @@ packages:
   file:projects/theme-1.tgz:
     resolution:
       {
-        integrity: sha512-uCuauh1P9yYHSaZ9AsoKO/4+0PNZui6uKbvEX78uESh9xHiIEb19KV6aHv8hUqj4TS4+gI+lszbVqPepHTvROw==,
+        integrity: sha512-gcw8ls4kh8KDRKjsS7EUoYc7TqDfSVINKXOuuWAn7ISArO3Ca7ljXFJqNHQ4blqiIkSX0rK18oMrz93F/QLyXw==,
         tarball: file:projects/theme-1.tgz,
       }
     name: '@rush-temp/theme-1'
@@ -9502,6 +9508,66 @@ packages:
       eslint-config-prettier: 6.15.0_eslint@6.8.0
       eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
       microbundle: 0.14.1
+      minimist: 1.2.5
+      typescript: 4.4.4
+    transitivePeerDependencies:
+      - prettier
+      - supports-color
+    dev: false
+
+  file:projects/theme-2.tgz:
+    resolution:
+      {
+        integrity: sha512-5emW5aibPtgXrbM+PeeGbnASN2cdrJxpNTH3J5OWTNfZh4lJr43nru7pxqRo1aXcBEfyim8JCZbBx6Y+aJCr2w==,
+        tarball: file:projects/theme-2.tgz,
+      }
+    name: '@rush-temp/theme-2'
+    version: 0.0.0
+    dependencies:
+      esbuild: 0.13.12
+      eslint: 6.8.0
+      eslint-config-prettier: 6.15.0_eslint@6.8.0
+      eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
+      minimist: 1.2.5
+      typescript: 4.4.4
+    transitivePeerDependencies:
+      - prettier
+      - supports-color
+    dev: false
+
+  file:projects/theme-3.tgz:
+    resolution:
+      {
+        integrity: sha512-iOt/1MecMfXgjmdV7L3U+qJa0x3aqHo0BHAGfo0OcFUid9uxDKRUuduiCV/vWEGmyApLu/wCnwQpauAE8L8lZg==,
+        tarball: file:projects/theme-3.tgz,
+      }
+    name: '@rush-temp/theme-3'
+    version: 0.0.0
+    dependencies:
+      esbuild: 0.13.12
+      eslint: 6.8.0
+      eslint-config-prettier: 6.15.0_eslint@6.8.0
+      eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
+      minimist: 1.2.5
+      typescript: 4.4.4
+    transitivePeerDependencies:
+      - prettier
+      - supports-color
+    dev: false
+
+  file:projects/theme-template.tgz:
+    resolution:
+      {
+        integrity: sha512-dGO7yc1pCiAraaD5I+hpyhkUL45uR4hLXqSBaviow61SUtswNZtc/f2QCsv3BQDQTNCHJM5lk08xploirQtBoA==,
+        tarball: file:projects/theme-template.tgz,
+      }
+    name: '@rush-temp/theme-template'
+    version: 0.0.0
+    dependencies:
+      esbuild: 0.13.12
+      eslint: 6.8.0
+      eslint-config-prettier: 6.15.0_eslint@6.8.0
+      eslint-plugin-prettier: 3.4.1_34b987980802eeead92ce6e5f9e6bf93
       minimist: 1.2.5
       typescript: 4.4.4
     transitivePeerDependencies:

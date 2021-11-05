@@ -405,8 +405,20 @@
       "projectFolder": "components/table"
     },
     {
+      "packageName": "theme-template",
+      "projectFolder": "themes/theme-template"
+    },
+    {
       "packageName": "theme-1",
       "projectFolder": "themes/theme-1"
+    },
+    {
+      "packageName": "theme-2",
+      "projectFolder": "themes/theme-2"
+    },
+    {
+      "packageName": "theme-3",
+      "projectFolder": "themes/theme-3"
     }
     // {
     //   /**

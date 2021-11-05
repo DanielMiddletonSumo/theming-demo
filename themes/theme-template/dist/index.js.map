@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["export interface Theme {\n  colors: {\n    primary: string;\n    secondary: string;\n    accent: string;\n    danger: string;\n    caution: string;\n  };\n  typography: {\n    font: string;\n    lineHeight: string;\n  };\n  spacing: {\n    one: string;\n    two: string;\n    three: string;\n    four: string;\n    five: string;\n    six: string;\n    seven: string;\n  };\n}\n"],
+  "mappings": ";;;;AAAA;",
+  "names": []
+}

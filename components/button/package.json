@@ -38,6 +38,7 @@
     "dist"
   ],
   "dependencies": {
-    "theme-1": "~1.0.0"
+    "theme-1": "~1.0.0",
+    "theme-template": "~1.0.0"
   }
 }
