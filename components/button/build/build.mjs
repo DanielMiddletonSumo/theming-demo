@@ -13,7 +13,8 @@ const options = {
   sourcemap: 'external',
   target: 'es2015',
   mainFields: ['module', 'main'],
-  external: ['@emotion/react'],
+  external: ['@emotion/react', 'react'],
+  watch: argv.watch,
 };
 
 async function main() {

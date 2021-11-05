@@ -13,7 +13,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <Heading>
+        <Heading
+          themeOverride={{
+            colors: {
+              primary: 'blue',
+              accent: 'green',
+            },
+          }}
+        >
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </Heading>
         <Button

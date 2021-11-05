@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@rush-temp/app-1': file:./projects/app-1.tgz
+  '@rush-temp/app-2': file:./projects/app-2.tgz
   '@rush-temp/app-3': file:./projects/app-3.tgz
   '@rush-temp/button': file:./projects/button.tgz
   '@rush-temp/heading': file:./projects/heading.tgz
@@ -9,6 +11,7 @@ specifiers:
   '@rush-temp/theme-2': file:./projects/theme-2.tgz
   '@rush-temp/theme-3': file:./projects/theme-3.tgz
   '@rush-temp/theme-template': file:./projects/theme-template.tgz
+  '@types/lodash-es': ~4.17.5
   '@types/react': ^16.9.27
   '@types/react-dom': ^16.9.7
   esbuild: ~0.13.12
@@ -23,6 +26,8 @@ specifiers:
   typescript: ~4.4.4
 
 dependencies:
+  '@rush-temp/app-1': file:projects/app-1.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f
+  '@rush-temp/app-2': file:projects/app-2.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f
   '@rush-temp/app-3': file:projects/app-3.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f
   '@rush-temp/button': file:projects/button.tgz
   '@rush-temp/heading': file:projects/heading.tgz
@@ -31,6 +36,7 @@ dependencies:
   '@rush-temp/theme-2': file:projects/theme-2.tgz
   '@rush-temp/theme-3': file:projects/theme-3.tgz
   '@rush-temp/theme-template': file:projects/theme-template.tgz
+  '@types/lodash-es': 4.17.5
   '@types/react': 16.14.20
   '@types/react-dom': 16.9.14
   esbuild: 0.13.12
@@ -9392,10 +9398,64 @@ packages:
     engines: { node: '>=10' }
     dev: false
 
+  file:projects/app-1.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f:
+    resolution:
+      {
+        integrity: sha512-YzzGJZbzdpAJ1K8nTvi1DKk5hAf1NAsyVlB0ecpnQcFK3T6BzWAq/A86SifkKN3bAAZZ8iLYnYSrus3u6Sclwg==,
+        tarball: file:projects/app-1.tgz,
+      }
+    id: file:projects/app-1.tgz
+    name: '@rush-temp/app-1'
+    version: 0.0.0
+    dependencies:
+      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      eslint: 7.32.0
+      eslint-config-next: 12.0.1_943cb0687d4531bd47edc4d1dd3992b2
+      next: 12.0.1_react-dom@17.0.2+react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/react'
+      - fibers
+      - node-sass
+      - sass
+      - supports-color
+      - typescript
+      - webpack
+    dev: false
+
+  file:projects/app-2.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f:
+    resolution:
+      {
+        integrity: sha512-F99GivVjv8vvEEyzjBLzHlVR28M5s9VpnIry+BcqruwgjmTecw5RYTG9pGUg3XUcojqSqkPXbsEB6s/8lu9e3A==,
+        tarball: file:projects/app-2.tgz,
+      }
+    id: file:projects/app-2.tgz
+    name: '@rush-temp/app-2'
+    version: 0.0.0
+    dependencies:
+      '@emotion/react': 11.5.0_8f2a70223edc24c84ceb1eb31a596bed
+      eslint: 7.32.0
+      eslint-config-next: 12.0.1_943cb0687d4531bd47edc4d1dd3992b2
+      next: 12.0.1_react-dom@17.0.2+react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@types/react'
+      - fibers
+      - node-sass
+      - sass
+      - supports-color
+      - typescript
+      - webpack
+    dev: false
+
   file:projects/app-3.tgz_572c4a2a5bb21d23ecf91b31d3b8cb3f:
     resolution:
       {
-        integrity: sha512-CSdXNvli9wX5QZmj9hNDmQFNZHPoJ/crG6pBJsqDoOboFKrArki3JjgXNnhk8jmW43GN9VrReos2O0cT/WmiiA==,
+        integrity: sha512-aAofz2Y/hVE+rH/10jNfR+YLbb0GXbBIthmt/AX9cuZoihCbp0n9VbpIzcoSqDgAMRKOgHLdmlAmeixMnONbzA==,
         tarball: file:projects/app-3.tgz,
       }
     id: file:projects/app-3.tgz

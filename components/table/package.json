@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "node build/build.mjs && rushx generateTypes",
+    "dev": "node build/build.mjs --watch",
     "generateTypes": "tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
