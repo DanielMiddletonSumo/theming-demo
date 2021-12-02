@@ -15,18 +15,23 @@
     "build": "node build/build.mjs && rushx generateTypes",
     "generateTypes": "tsc --emitDeclarationOnly"
   },
+  "peerDependencies": {
+    "@emotion/react": ">=11.7.0",
+    "@emotion/styled": ">=11.6.0",
+    "@mui/material": ">=5.2.2"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "typescript": "~4.4.4",
     "esbuild": "~0.13.12",
-    "minimist": "~1.2.5"
+    "minimist": "~1.2.5",
+    "@emotion/react": "~11.7.0",
+    "@emotion/styled": "~11.6.0",
+    "@mui/material": "~5.2.2"
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "theme-template": "~1.0.0"
-  }
+  ]
 }

@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider } from '@mui/material';
 import { theme } from 'theme-2';
 
 function MyApp({ Component, pageProps }) {

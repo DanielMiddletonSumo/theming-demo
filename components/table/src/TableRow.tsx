@@ -1,13 +1,17 @@
+import { StyledBox } from './StyledBox';
+
 interface TableRowProps {
   row: string[];
 }
 
 export const TableRow = ({ row }: TableRowProps) => {
   return (
-    <tr>
+    <StyledBox component="tr">
       {row.map(field => (
-        <td key={field}>{field}</td>
+        <StyledBox key={field} component="td">
+          {field}
+        </StyledBox>
       ))}
-    </tr>
+    </StyledBox>
   );
 };

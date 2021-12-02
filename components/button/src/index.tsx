@@ -1,4 +1,4 @@
-import { css, ThemeProvider, Theme } from '@emotion/react';
+import { Box, ThemeProvider } from '@mui/material';
 import { theme } from 'theme-1';
 
 interface ButtonProps {
@@ -9,17 +9,18 @@ interface ButtonProps {
 
 export const Button = ({ children, type = 'button', onClick }: ButtonProps) => {
   return (
-    <ThemeProvider theme={theme}>
-      <button
-        css={(theme: Theme) => css`
-          color: ${theme.colors.primary};
-          border-color: ${theme.colors.secondary};
-        `}
+    <ThemeProvider theme={outerTheme => ({ ...theme, ...outerTheme })}>
+      <Box
+        component="button"
+        sx={{
+          color: 'primary.main',
+          borderColor: theme => theme.palette.secondary.main,
+        }}
         type={type}
         onClick={onClick}
       >
         {children}
-      </button>
+      </Box>
     </ThemeProvider>
   );
 };

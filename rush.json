@@ -405,10 +405,6 @@
       "projectFolder": "components/table"
     },
     {
-      "packageName": "theme-template",
-      "projectFolder": "themes/theme-template"
-    },
-    {
       "packageName": "theme-1",
       "projectFolder": "themes/theme-1"
     },

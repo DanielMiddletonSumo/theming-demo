@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { blue, green } from '@mui/material/colors';
 import { Heading } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
@@ -15,9 +16,9 @@ export default function Home() {
       <main>
         <Heading
           themeOverride={{
-            colors: {
-              primary: 'blue',
-              accent: 'green',
+            palette: {
+              primary: blue[500],
+              info: green[500],
             },
           }}
         >

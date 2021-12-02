@@ -1,23 +1,23 @@
-import { css, ThemeProvider, Theme, useTheme } from '@emotion/react';
+import { Theme, ThemeProvider, useTheme, Box, SxProps } from '@mui/material';
 import { merge } from 'lodash-es';
 import { useMemo } from 'react';
 import { theme } from 'theme-1';
 
-interface StyleOverrides {
-  heading: Record<string, string>;
-}
-
 interface HeadingProps {
   children: React.ReactNode;
-  themeOverride?: Partial<Theme>;
-  styleOverrides?: StyleOverrides;
+  themeOverride?: Theme;
 }
 
-export const Heading = ({
-  children,
-  themeOverride,
-  styleOverrides,
-}: HeadingProps) => {
+declare module '@mui/material/styles' {
+  interface Components {
+    heading?: {
+      defaultProps: Omit<React.HTMLProps<HTMLHeadingElement>, 'ref'>;
+      styleOverrides: SxProps<Theme>;
+    };
+  }
+}
+
+export const Heading = ({ children, themeOverride }: HeadingProps) => {
   const containerTheme = useTheme();
 
   const mergedTheme = useMemo(
@@ -27,17 +27,17 @@ export const Heading = ({
 
   return (
     <ThemeProvider theme={mergedTheme}>
-      <h1
-        css={(theme: Theme) => [
-          css`
-            color: ${theme.colors.primary};
-            border: 5px solid ${theme.colors.accent};
-          `,
-          styleOverrides?.heading,
-        ]}
+      <Box
+        component="h1"
+        sx={{
+          color: 'primary.main',
+          border: theme => `${theme.spacing(1)} solid ${theme.palette.info}`,
+          ...mergedTheme.components?.heading?.styleOverrides,
+        }}
+        {...mergedTheme.components?.heading?.defaultProps}
       >
         {children}
-      </h1>
+      </Box>
     </ThemeProvider>
   );
 };

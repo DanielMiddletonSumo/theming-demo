@@ -1,59 +1,63 @@
-import { ThemeProvider } from '@emotion/react';
-import { createContext } from 'react';
+import { Theme, ThemeProvider, useTheme, SxProps } from '@mui/material';
+import { useMemo } from 'react';
+import { merge } from 'lodash-es';
 import { theme } from 'theme-1';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
+import { StyledBox } from './StyledBox';
 
 export interface TableData {
   headers?: string[];
   rows: string[][];
 }
 
-interface StyleOverrides {
-  table: Record<string, string>;
-  tableRow: Record<string, string>;
-  tableCell: Record<string, string>;
-  tableHeader: Record<string, string>;
-}
-
 interface TableProps {
   data: TableData;
-  styleOverrides?: StyleOverrides;
+  themeOverride: Theme;
 }
 
-const initialStyleOverrides = {
-  table: {},
-  tableRow: {},
-  tableCell: {},
-  tableHeader: {},
-};
-
-export const StyleOverridesContext = createContext(initialStyleOverrides);
+declare module '@mui/material/styles' {
+  interface Components {
+    table?: {
+      defaultProps: Omit<React.HTMLProps<HTMLTableElement>, 'ref'>;
+      styleOverrides: SxProps<Theme>;
+    };
+    thead?: {
+      defaultProps: Omit<React.HTMLProps<HTMLTableElement>, 'ref'>;
+      styleOverrides: SxProps<Theme>;
+    };
+  }
+}
 
 export const Table = ({
   data: { headers, rows },
-  styleOverrides = initialStyleOverrides,
+  themeOverride,
 }: TableProps) => {
+  const containerTheme = useTheme();
+
+  const mergedTheme = useMemo(
+    () => merge({}, theme, containerTheme, themeOverride),
+    [themeOverride, containerTheme]
+  );
+
   return (
-    <ThemeProvider theme={theme}>
-      <StyleOverridesContext.Provider value={styleOverrides}>
-        <table>
-          {!!headers?.length && (
-            <thead>
-              <tr>
-                {headers.map(header => (
-                  <TableHeader key={header}>{header}</TableHeader>
-                ))}
-              </tr>
-            </thead>
-          )}
-          <tbody>
-            {rows.map(row => (
-              <TableRow key={row.join('')} row={row} />
-            ))}
-          </tbody>
-        </table>
-      </StyleOverridesContext.Provider>
+    <ThemeProvider theme={mergedTheme}>
+      <StyledBox component="table">
+        {!!headers?.length && (
+          <StyledBox component="thead">
+            <StyledBox component="tr">
+              {headers.map(header => (
+                <TableHeader key={header}>{header}</TableHeader>
+              ))}
+            </StyledBox>
+          </StyledBox>
+        )}
+        <StyledBox component="tbody">
+          {rows.map(row => (
+            <TableRow key={row.join('')} row={row} />
+          ))}
+        </StyledBox>
+      </StyledBox>
     </ThemeProvider>
   );
 };

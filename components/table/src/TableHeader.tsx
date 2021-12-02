@@ -1,24 +1,18 @@
-import { css, Theme } from '@emotion/react';
-import { useContext } from 'react';
-import { StyleOverridesContext } from '.';
+import { StyledBox } from './StyledBox';
 
 interface TableHeaderProps {
   children: React.ReactNode;
 }
 
 export const TableHeader = ({ children }: TableHeaderProps) => {
-  const styleOverrides = useContext(StyleOverridesContext);
-
   return (
-    <th
-      css={(theme: Theme) => [
-        css`
-          color: ${theme.colors.secondary};
-        `,
-        styleOverrides.tableHeader,
-      ]}
+    <StyledBox
+      component="th"
+      sx={{
+        color: 'secondary.main',
+      }}
     >
       {children}
-    </th>
+    </StyledBox>
   );
 };

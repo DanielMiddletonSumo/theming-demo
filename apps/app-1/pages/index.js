@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { green, red, blue } from '@mui/material/colors';
 import { Heading } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
@@ -15,13 +16,18 @@ export default function Home() {
       <main>
         <Heading
           themeOverride={{
-            colors: {
-              primary: 'blue',
-              accent: 'green',
+            palette: {
+              primary: { main: blue[500] },
+              info: { main: green[500] },
             },
-          }}
-          styleOverrides={{
-            heading: { color: 'red', border: '10px dotted skyblue' },
+            components: {
+              heading: {
+                styleOverrides: {
+                  color: red[500],
+                  border: '10px dotted skyblue',
+                },
+              },
+            },
           }}
         >
           Welcome to <a href="https://nextjs.org">Next.js!</a>

@@ -1,24 +1,16 @@
-import { Theme } from 'theme-template';
+import { createTheme } from '@mui/material';
+import { orange, red } from '@mui/material/colors';
 
-export const theme: Theme = {
-  colors: {
-    primary: '#555753',
-    secondary: '#7D775C',
-    accent: '#B7A5DF',
-    danger: 'red',
-    caution: 'orange',
+export const theme = createTheme({
+  palette: {
+    primary: { main: '#555753' },
+    secondary: { main: '#7D775C' },
+    info: { main: '#B7A5DF' },
+    error: { main: red[500] },
+    warning: { main: orange[500] },
   },
   typography: {
-    font: '75% georgia, sans-serif',
-    lineHeight: '1.88889',
+    fontFamily: '75% georgia, sans-serif',
   },
-  spacing: {
-    one: '10px',
-    two: '20px',
-    three: '30px',
-    four: '40px',
-    five: '50px',
-    six: '60px',
-    seven: '70px',
-  },
-};
+  spacing: 5,
+});
