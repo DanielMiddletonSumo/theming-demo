@@ -1,13 +1,5 @@
 /// <reference types="react" />
 import { Theme, SxProps } from '@mui/material';
-export interface TableData {
-  headers?: string[];
-  rows: string[][];
-}
-interface TableProps {
-  data: TableData;
-  themeOverride: Theme;
-}
 declare module '@mui/material/styles' {
   interface Components {
     table?: {
@@ -19,6 +11,14 @@ declare module '@mui/material/styles' {
       styleOverrides: SxProps<Theme>;
     };
   }
+}
+export interface TableData {
+  headers?: string[];
+  rows: string[][];
+}
+interface TableProps {
+  data: TableData;
+  themeOverride: Theme;
 }
 export declare const Table: ({
   data: { headers, rows },

@@ -2,42 +2,10 @@ var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __propIsEnum = Object.prototype.propertyIsEnumerable;
 var __pow = Math.pow;
-var __defNormalProp = (obj, key, value) =>
-  key in obj
-    ? __defProp(obj, key, {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value,
-      })
-    : (obj[key] = value);
-var __spreadValues = (a, b) => {
-  for (var prop in b || (b = {}))
-    if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]);
-  if (__getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(b)) {
-      if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]);
-    }
-  return a;
-};
 var __markAsModule = target => __defProp(target, '__esModule', { value: true });
-var __objRest = (source, exclude) => {
-  var target = {};
-  for (var prop in source)
-    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-      target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols)
-    for (var prop of __getOwnPropSymbols(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-        target[prop] = source[prop];
-    }
-  return target;
-};
 var __esm = (fn, res) =>
   function __init() {
     return fn && (res = (0, fn[Object.keys(fn)[0]])((fn = 0))), res;
@@ -8773,44 +8741,9 @@ var import_theme_1 = __toModule(require_dist());
 
 // src/TableHeader.tsx
 init_react_shim();
-
-// src/StyledBox.tsx
-init_react_shim();
-var StyledBox = _a => {
-  var _b = _a,
-    { component, children, sx } = _b,
-    rest = __objRest(_b, ['component', 'children', 'sx']);
-  var _a2, _b2, _c, _d;
-  const theme2 = useTheme4();
-  return /* @__PURE__ */ jsx(
-    Box_default,
-    __spreadValues(
-      __spreadValues(
-        {
-          component,
-          sx: __spreadValues(
-            __spreadValues({}, sx),
-            (_b2 =
-              (_a2 = theme2.components) == null ? void 0 : _a2[component]) ==
-              null
-              ? void 0
-              : _b2.styleOverrides
-          ),
-        },
-        rest
-      ),
-      (_d = (_c = theme2.components) == null ? void 0 : _c[component]) == null
-        ? void 0
-        : _d.defaultProps
-    ),
-    children
-  );
-};
-
-// src/TableHeader.tsx
 var TableHeader = ({ children }) => {
   return /* @__PURE__ */ jsx(
-    StyledBox,
+    Box_default,
     {
       component: 'th',
       sx: {
@@ -8825,13 +8758,13 @@ var TableHeader = ({ children }) => {
 init_react_shim();
 var TableRow = ({ row }) => {
   return /* @__PURE__ */ jsx(
-    StyledBox,
+    Box_default,
     {
       component: 'tr',
     },
     row.map(field =>
       /* @__PURE__ */ jsx(
-        StyledBox,
+        Box_default,
         {
           key: field,
           component: 'td',
@@ -8856,18 +8789,18 @@ var Table = ({ data: { headers, rows }, themeOverride }) => {
       theme: mergedTheme,
     },
     /* @__PURE__ */ jsx(
-      StyledBox,
+      Box_default,
       {
         component: 'table',
       },
       !!(headers == null ? void 0 : headers.length) &&
         /* @__PURE__ */ jsx(
-          StyledBox,
+          Box_default,
           {
             component: 'thead',
           },
           /* @__PURE__ */ jsx(
-            StyledBox,
+            Box_default,
             {
               component: 'tr',
             },
@@ -8883,7 +8816,7 @@ var Table = ({ data: { headers, rows }, themeOverride }) => {
           )
         ),
       /* @__PURE__ */ jsx(
-        StyledBox,
+        Box_default,
         {
           component: 'tbody',
         },

@@ -1,10 +1,9 @@
-import { Theme, ThemeProvider, useTheme, SxProps } from '@mui/material';
+import { Theme, ThemeProvider, useTheme, SxProps, Box } from '@mui/material';
 import { useMemo } from 'react';
 import { merge } from 'lodash-es';
 import { theme } from 'theme-1';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
-import { StyledBox } from './StyledBox';
 
 declare module '@mui/material/styles' {
   interface Components {
@@ -42,22 +41,22 @@ export const Table = ({
 
   return (
     <ThemeProvider theme={mergedTheme}>
-      <StyledBox component="table">
+      <Box component="table">
         {!!headers?.length && (
-          <StyledBox component="thead">
-            <StyledBox component="tr">
+          <Box component="thead">
+            <Box component="tr">
               {headers.map(header => (
                 <TableHeader key={header}>{header}</TableHeader>
               ))}
-            </StyledBox>
-          </StyledBox>
+            </Box>
+          </Box>
         )}
-        <StyledBox component="tbody">
+        <Box component="tbody">
           {rows.map(row => (
             <TableRow key={row.join('')} row={row} />
           ))}
-        </StyledBox>
-      </StyledBox>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 };

@@ -1,4 +1,4 @@
-import { StyledBox } from './StyledBox';
+import { Box } from '@mui/material';
 
 interface TableRowProps {
   row: string[];
@@ -6,12 +6,12 @@ interface TableRowProps {
 
 export const TableRow = ({ row }: TableRowProps) => {
   return (
-    <StyledBox component="tr">
+    <Box component="tr">
       {row.map(field => (
-        <StyledBox key={field} component="td">
+        <Box key={field} component="td">
           {field}
-        </StyledBox>
+        </Box>
       ))}
-    </StyledBox>
+    </Box>
   );
 };

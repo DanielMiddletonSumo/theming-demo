@@ -1,4 +1,4 @@
-import { StyledBox } from './StyledBox';
+import { Box } from '@mui/material';
 
 interface TableHeaderProps {
   children: React.ReactNode;
@@ -6,13 +6,13 @@ interface TableHeaderProps {
 
 export const TableHeader = ({ children }: TableHeaderProps) => {
   return (
-    <StyledBox
+    <Box
       component="th"
       sx={{
         color: 'secondary.main',
       }}
     >
       {children}
-    </StyledBox>
+    </Box>
   );
 };
