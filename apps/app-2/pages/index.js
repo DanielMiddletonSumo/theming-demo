@@ -17,8 +17,8 @@ export default function Home() {
         <Heading
           themeOverride={{
             palette: {
-              primary: blue[500],
-              info: green[500],
+              primary: { main: blue[500] },
+              info: { main: green[500] },
             },
           }}
         >

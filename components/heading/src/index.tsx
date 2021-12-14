@@ -31,7 +31,8 @@ export const Heading = ({ children, themeOverride }: HeadingProps) => {
         component="h1"
         sx={{
           color: 'primary.main',
-          border: theme => `${theme.spacing(1)} solid ${theme.palette.info}`,
+          border: theme =>
+            `${theme.spacing(1)} solid ${theme.palette.info.main}`,
           ...mergedTheme.components?.heading?.styleOverrides,
         }}
         {...mergedTheme.components?.heading?.defaultProps}

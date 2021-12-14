@@ -8804,7 +8804,7 @@ var Heading = ({ children, themeOverride }) => {
             {
               color: 'primary.main',
               border: theme2 =>
-                `${theme2.spacing(1)} solid ${theme2.palette.info}`,
+                `${theme2.spacing(1)} solid ${theme2.palette.info.main}`,
             },
             (_b =
               (_a = mergedTheme.components) == null ? void 0 : _a.heading) ==
