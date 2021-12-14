@@ -42,3 +42,5 @@ export const Heading = ({ children, themeOverride }: HeadingProps) => {
     </ThemeProvider>
   );
 };
+
+export { ThemeProvider } from '@mui/material';

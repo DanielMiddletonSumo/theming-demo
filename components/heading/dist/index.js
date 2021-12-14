@@ -3916,6 +3916,7 @@ const theme2 = createTheme({ palette: {
 // src/index.tsx
 __export(exports, {
   Heading: () => Heading,
+  ThemeProvider: () => ThemeProvider_default2,
 });
 init_react_shim();
 

@@ -16,4 +16,4 @@ export declare const Heading: ({
   children,
   themeOverride,
 }: HeadingProps) => import('@emotion/react/types/jsx-namespace').EmotionJSX.Element;
-export {};
+export { ThemeProvider } from '@mui/material';

@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from 'heading';
 import { theme } from 'theme-2';
 
 function MyApp({ Component, pageProps }) {

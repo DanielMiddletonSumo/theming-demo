@@ -8796,7 +8796,7 @@ var Heading = ({ children, themeOverride }) => {
     )
   );
 };
-export { Heading };
+export { Heading, ThemeProvider_default2 as ThemeProvider };
 /*
 object-assign
 (c) Sindre Sorhus
