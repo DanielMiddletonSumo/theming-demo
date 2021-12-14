@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export const Button = ({ children, type = 'button', onClick }: ButtonProps) => {
   return (
-    <ThemeProvider theme={outerTheme => ({ ...theme, ...outerTheme })}>
+    <ThemeProvider theme={theme}>
       <Box
         component="button"
         sx={{

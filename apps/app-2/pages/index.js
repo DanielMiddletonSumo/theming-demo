@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { blue, green } from '@mui/material/colors';
 import { Heading } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
+import { Box, Button as MuiButton } from '@mui/material';
 
 export default function Home() {
   return (
@@ -14,14 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Heading
-          themeOverride={{
-            palette: {
-              primary: { main: blue[500] },
-              info: { main: green[500] },
-            },
-          }}
-        >
+        <Heading>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </Heading>
         <Button
@@ -31,6 +24,11 @@ export default function Home() {
         >
           Click Me
         </Button>
+        <Box m={1}>
+          <MuiButton variant="contained" color="primary">
+            Material UI 4 Button
+          </MuiButton>
+        </Box>
         <Table
           data={{
             headers: ['column 1', 'column 2'],
@@ -40,6 +38,7 @@ export default function Home() {
             ],
           }}
         />
+        <p>App Content</p>
       </main>
     </div>
   );

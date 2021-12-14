@@ -2659,7 +2659,7 @@ var createTheme_default2 = createTheme2;
 // src/index.ts
 var theme = createTheme_default2({
   palette: {
-    primary: { main: blue_default[500] },
+    primary: { main: blue_default[100] },
     secondary: { main: '#7D775C' },
     info: { main: '#B7A5DF' },
     error: { main: red_default[500] },

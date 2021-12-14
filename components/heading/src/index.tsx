@@ -1,6 +1,6 @@
 import { Theme, ThemeProvider, useTheme, Box, SxProps } from '@mui/material';
 import { merge } from 'lodash-es';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { theme } from 'theme-1';
 
 interface HeadingProps {
@@ -25,6 +25,19 @@ export const Heading = ({ children, themeOverride }: HeadingProps) => {
     [themeOverride, containerTheme]
   );
 
+  useEffect(() => {
+    console.log('heading theme: ', theme);
+    console.log('heading container theme: ', containerTheme);
+    console.log('theme override: ', themeOverride);
+    console.log('heading merged theme: ', mergedTheme);
+
+    // @ts-ignore
+    window.heading = {
+      ThemeProvider,
+      useTheme,
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={mergedTheme}>
       <Box
@@ -35,7 +48,6 @@ export const Heading = ({ children, themeOverride }: HeadingProps) => {
             `${theme.spacing(1)} solid ${theme.palette.info.main}`,
           ...mergedTheme.components?.heading?.styleOverrides,
         }}
-        {...mergedTheme.components?.heading?.defaultProps}
       >
         {children}
       </Box>

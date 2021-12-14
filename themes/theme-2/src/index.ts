@@ -3,7 +3,7 @@ import { orange, red, blue } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
-    primary: { main: blue[500] },
+    primary: { main: blue[100] },
     secondary: { main: '#7D775C' },
     info: { main: '#B7A5DF' },
     error: { main: red[500] },
