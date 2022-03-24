@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Heading } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
-import { Box, Button as MuiButton } from '@mui/material';
+import { Link } from '@mui/material';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
 
       <main>
         <Heading>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <Link href="https://nextjs.org">Next.js!</Link>
         </Heading>
         <Button
           onClick={() => {
@@ -24,11 +24,6 @@ export default function Home() {
         >
           Click Me
         </Button>
-        <Box m={1}>
-          <MuiButton variant="contained" color="primary">
-            Material UI 4 Button
-          </MuiButton>
-        </Box>
         <Table
           data={{
             headers: ['column 1', 'column 2'],
@@ -38,7 +33,6 @@ export default function Home() {
             ],
           }}
         />
-        <p>App Content</p>
       </main>
     </div>
   );

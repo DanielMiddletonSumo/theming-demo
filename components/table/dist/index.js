@@ -3889,6 +3889,26 @@ const theme2 = createTheme({ palette: {
         ].join(','),
       },
       spacing: 10,
+      components: {
+        MuiButton: {
+          defaultProps: {
+            size: 'large',
+          },
+          styleOverrides: {
+            root: {
+              fontSize: '1rem',
+            },
+          },
+        },
+        MuiLink: {
+          styleOverrides: {
+            root: {
+              direction: 'rtl',
+              unicodeBidi: 'bidi-override',
+            },
+          },
+        },
+      },
     });
   },
 });

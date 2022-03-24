@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Link } from '@mui/material';
 import { Heading } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
@@ -14,7 +15,7 @@ export default function Home() {
 
       <main>
         <Heading>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <Link href="https://nextjs.org">Next.js!</Link>
         </Heading>
         <Button
           onClick={() => {

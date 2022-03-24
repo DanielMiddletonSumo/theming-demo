@@ -2672,9 +2672,9 @@ var createTheme_default2 = createTheme2;
 // src/index.ts
 var theme = createTheme_default2({
   palette: {
-    primary: { main: '#555753' },
-    secondary: { main: '#7D775C' },
-    info: { main: '#B7A5DF' },
+    primary: { main: blue_default[600] },
+    secondary: { main: orange_default[300] },
+    info: { main: red_default[900] },
     error: { main: red_default[500] },
     warning: { main: orange_default[500] },
   },
@@ -2682,6 +2682,18 @@ var theme = createTheme_default2({
     fontFamily: '75% georgia, sans-serif',
   },
   spacing: 5,
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: 'contained',
+      },
+      styleOverrides: {
+        root: {
+          fontSize: '4rem',
+        },
+      },
+    },
+  },
 });
 /*
 object-assign

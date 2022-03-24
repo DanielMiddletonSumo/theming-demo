@@ -1,11 +1,11 @@
 import { createTheme } from '@mui/material';
-import { orange, red } from '@mui/material/colors';
+import { orange, red, blue } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
-    primary: { main: '#555753' },
-    secondary: { main: '#7D775C' },
-    info: { main: '#B7A5DF' },
+    primary: { main: blue[600] },
+    secondary: { main: orange[300] },
+    info: { main: red[900] },
     error: { main: red[500] },
     warning: { main: orange[500] },
   },
@@ -13,4 +13,16 @@ export const theme = createTheme({
     fontFamily: '75% georgia, sans-serif',
   },
   spacing: 5,
+  components: {
+    MuiButton: {
+      defaultProps: {
+        variant: 'contained',
+      },
+      styleOverrides: {
+        root: {
+          fontSize: '4rem',
+        },
+      },
+    },
+  },
 });

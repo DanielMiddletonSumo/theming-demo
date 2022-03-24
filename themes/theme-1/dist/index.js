@@ -2693,6 +2693,26 @@ var theme = createTheme_default2({
     ].join(','),
   },
   spacing: 10,
+  components: {
+    MuiButton: {
+      defaultProps: {
+        size: 'large',
+      },
+      styleOverrides: {
+        root: {
+          fontSize: '1rem',
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          direction: 'rtl',
+          unicodeBidi: 'bidi-override',
+        },
+      },
+    },
+  },
 });
 /*
 object-assign

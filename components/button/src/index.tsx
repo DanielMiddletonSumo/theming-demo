@@ -1,4 +1,4 @@
-import { Box, ThemeProvider } from '@mui/material';
+import { Button as MuiButton, ThemeProvider } from '@mui/material';
 import { theme } from 'theme-1';
 
 interface ButtonProps {
@@ -10,17 +10,9 @@ interface ButtonProps {
 export const Button = ({ children, type = 'button', onClick }: ButtonProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <Box
-        component="button"
-        sx={{
-          color: 'primary.main',
-          borderColor: theme => theme.palette.secondary.main,
-        }}
-        type={type}
-        onClick={onClick}
-      >
+      <MuiButton type={type} color="success" onClick={onClick}>
         {children}
-      </Box>
+      </MuiButton>
     </ThemeProvider>
   );
 };

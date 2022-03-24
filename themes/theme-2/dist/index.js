@@ -2682,6 +2682,18 @@ var theme = createTheme_default2({
     fontFamily: '75% georgia, sans-serif',
   },
   spacing: 5,
+  components: {
+    MuiButton: {
+      defaultProps: {
+        size: 'small',
+      },
+      styleOverrides: {
+        root: {
+          fontSize: '2rem',
+        },
+      },
+    },
+  },
 });
 /*
 object-assign

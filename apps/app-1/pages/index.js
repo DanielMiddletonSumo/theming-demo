@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { green, red, blue } from '@mui/material/colors';
-import { Heading } from 'heading';
+import { Heading, ThemeProvider } from 'heading';
 import { Button } from 'button';
 import { Table } from 'table';
+import { Link } from '@mui/material';
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Heading
-          themeOverride={{
+        <ThemeProvider
+          theme={{
             palette: {
               primary: { main: blue[500] },
               info: { main: green[500] },
@@ -30,12 +31,15 @@ export default function Home() {
             },
           }}
         >
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </Heading>
+          <Heading>
+            Welcome to <Link href="https://nextjs.org">Next.js!</Link>
+          </Heading>
+        </ThemeProvider>
         <Button
           onClick={() => {
             console.log('clicked button');
           }}
+          color="success"
         >
           Click Me
         </Button>

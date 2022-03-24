@@ -43,7 +43,7 @@
     "dist"
   ],
   "dependencies": {
-    "theme-1": "~1.0.0",
+    "theme-2": "~1.0.0",
     "lodash-es": "~4.17.21"
   }
 }

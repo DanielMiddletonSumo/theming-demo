@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'heading';
-import { theme } from 'theme-2';
+import { theme } from 'theme-3';
 
 function MyApp({ Component, pageProps }) {
   return (
